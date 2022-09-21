@@ -34,6 +34,21 @@
         placeholder="Location"
         class="field"
       />
+      <h3>Time & Date</h3>
+      <label>Time</label>
+      <input
+        v-model="event.time"
+        type="text"
+        placeholder="Time"
+        class="field"
+      />
+      <label>Date</label>
+      <input
+        v-model="event.date"
+        type="text"
+        placeholder="Date"
+        class="field"
+      />
       <button type="submit">Submit</button>
     </form>
     <pre>{{ event }} </pre>
@@ -49,7 +64,9 @@ export default {
         category: '',
         title: '',
         description: '',
-        location: ''
+        location: '',
+        time: '',
+        data: ''
       }
     }
   },

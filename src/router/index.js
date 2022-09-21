@@ -11,6 +11,8 @@ import NProgress from 'nprogress'
 import GStore from '@/store'
 import EventService from '@/services/EventService'
 import AddEvent from '@/views/EventForm.vue'
+import AddOrgainzer from '@/views/OrganizeForm.vue'
+import OrganizerListView from '@/views/OrganizerListView.vue'
 const routes = [
   {
     path: '/',
@@ -27,6 +29,17 @@ const routes = [
     path: '/add-event',
     name: 'AddEvent',
     component: AddEvent
+  },
+  {
+    path: '/add-organizer',
+    name: 'AddOrgainzer',
+    component: AddOrgainzer
+  },
+  {
+    path: '/organizers',
+    name: 'OrgainzerList',
+    component: OrganizerListView,
+    props: (route) => ({ page: parseInt(route.query.page) || 1 })
   },
   {
     path: '/event/:id',
