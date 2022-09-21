@@ -34,7 +34,7 @@
         placeholder="Location"
         class="field"
       />
-      <button type="subnit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
     <pre>{{ event }} </pre>
   </div>
